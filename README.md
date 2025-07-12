@@ -35,6 +35,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
     key = Fernet.generate_key()
     with open("secret.key","wb") as f:
         f.write(key)
+        
 5 **Run the app**
     ```bash
     set FLASK_APP = app.py
