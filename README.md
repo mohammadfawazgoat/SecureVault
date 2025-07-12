@@ -30,6 +30,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
     ```bash
     pip install -r requirements.txt
 4 **Generate encryption Key**
+
     ```bash
     from cryptography.fernet import Fernet
     key = Fernet.generate_key()
