@@ -30,12 +30,13 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
     ```bash
     pip install -r requirements.txt
 4 **Generate encryption Key**
+   ```bash
     from cryptography.fernet import Fernet
     key = Fernet.generate_key()
     with open("secret.key","wb") as f:
-        f.write(key)
-
+      f.write(key)
 5 **Create a database file and name it password.db**
+   ```
    sqlite3 password.db
    CREATE TABLE users (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,5 +49,6 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
    username TEXT NOT NULL, user_id INTEGER);
 
  6 **Run the app**
+ ```bash
     set FLASK_APP = app.py
     flask run    
