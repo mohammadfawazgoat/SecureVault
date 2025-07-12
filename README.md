@@ -18,38 +18,45 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
 - werkzeug.security for password hashing
 
 ## 🚀 How to Run
-# 1. Clone the repository
-git clone https://github.com/mohammadfawazgoat/SecureVault
-cd SecureVault
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mohammadfawazgoat/SecureVault
+   cd securevault
+2. **Create a virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/scripts/activate
+3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+4 **Generate encryption Key**
 
-# 2. Create a virtual environment
-python -m venv venv
-source venv/Scripts/activate  # Use 'venv/bin/activate' on Unix-based systems (Linux/Mac)
+   
+    from cryptography.fernet import Fernet
+    key = Fernet.generate_key()
+    with open("secret.key","wb") as f:
+        f.write(key)
 
-# 3. Install dependencies
-pip install -r requirements.txt
+5 **Create a database file and name it password.db**
+   ```bash
+   
+   sqlite3 password.db
+   CREATE TABLE users (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   username TEXT NOT NULL,
+   password TEXT NOT NULL);
 
-# 4. Generate encryption key
-python -c "from cryptography.fernet import Fernet; key = Fernet.generate_key(); with open('secret.key', 'wb') as f: f.write(key)"
+   CREATE TABLE website_password(
+   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+   password TEXT NOT NULL,
+   website TEXT NOT NULL,
+   username TEXT NOT NULL, user_id INTEGER);
 
-# 5. Create a database file named password.db
-sqlite3 password.db <<EOF
-CREATE TABLE users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL,
-    password TEXT NOT NULL
-);
-CREATE TABLE website_password (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    password TEXT NOT NULL,
-    website TEXT NOT NULL,
-    username TEXT NOT NULL,
-    user_id INTEGER
-);
-EOF
 
-# 6. Run the app
-set FLASK_APP=app.py  # For Windows
-# Or, for Unix-based systems (Linux/Mac):
-# export FLASK_APP=app.py
-flask run
+
+ 6 **Run the app**
+    
+    
+    set FLASK_APP = app.py
+    flask run    
+What's wrong with the bashing 
