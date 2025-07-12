@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{%block image%}
+    <link href ="/static/images/Logo.png" rel="icon" class ="logo-img">
+{%endblock%}
+
+{%block title%}
+    SecureVault
+{%endblock%}
+
+{% block main %}
+
+    <div class = "lock">
+        <img src="/static/images/lock.png" alt="Lock Icon" class="lock-icon">
+    </div>
+    <div class = "name">
+        <h1 id = "jname">SecureVault</h1>
+    </div>
+    <h4 id="quote">Your secure password manager</h4>
+    <div class = "qs">
+    <h4 class = "questions">What is SecureVault?</h4>
+    <p id = "pp">SecureVault is a web-based secure password manager. It lets you store your personal passwords with end-to-end encryption. Your passwords are protected and only accessible by you.</p>
+    <h4 class = "questions">How to Use</h4>
+    <ol id = "oo">
+        <li class = "ans">Create an account or login.</li>
+        <li class = "ans">Add new passwords-they'll be encrypted before being saved.</li>
+        <li class = "ans">Access, edit or delete your passwords anytime you want.</li>
+    </ol>
+    <h4 class = "questions">Why Use SecureVault?</h4>
+    <ul class = "custom-list">
+        <li><i class="fa-solid fa-person-military-rifle"></i>Military-grade encryption</li>
+        <li><i class="fa-solid fa-moon"></i>Dark mode design</li>
+        <li><i class="fa-solid fa-lock"></i>Secure storage</li>
+        <li><i class="fa-regular fa-chart-bar"></i>Simple, intuitive interface</li>
+    </ul>
+
+
+
+    </div>
+{% endblock %}

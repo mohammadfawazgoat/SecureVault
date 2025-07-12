@@ -1,0 +1,177 @@
+{% extends "layout.html"%}
+
+{% block image %}
+ <link href = "/static/images/lock.png" rel = "icon">
+{%endblock%}
+
+{%block title%}
+Login
+{%endblock%}
+
+{%block main%}
+
+    <div class = "cont">
+        <div class = "login-container">
+            <div class = "form-slider">
+                <div class = "form">
+                    <h2>Login</h2>
+                    <form action = "/log" method = "POST">
+                        <p class = "para">USERNAME</p>
+                        <div id = "nothing">
+                        <input class = "inp" type= "text" name = "username"  autocomplete = "off" required>
+                        </div>
+                        <p class = "para">PASSWORD</p>
+                        <div id = "nothing">
+                        <div class="password-wrapper">
+                        <input id = "lpass" class = "inp" type= "password" name = "password"  autocomplete = "off" required>
+                        <i id = "lshows"class="fa-solid fa-eye"></i>
+                        </div>
+                        </div>
+                        <div id = "nothing">
+                            <button class = "signin" type = "submit">SIGN IN</button>
+                        </div>
+                    </form>
+                    <p id = "toggle">Don't have an account?  Click here</p>
+                    <p id="wrong"></p>
+                </div>
+                <div class = "form">
+                    <h2>Register</h2>
+                    <form action = "/register" method = "POST">
+                        <p class = "para">USERNAME</p>
+                        <div id = "nothing">
+                        <input class = "inp" type= "text" name = "username"  autocomplete = "off" required ">
+                        </div>
+                        <p class = "para">PASSWORD</p>
+                        <div>
+                        <div id = "nothing">
+                        <div class="password-wrapper">
+                        <input id = "pass" class = "inp" type= "password" name = "password"  autocomplete = "off" required>
+                        <i id = "show"class="fa-solid fa-eye"></i>
+                        </div>
+                        </div>
+                        <p id = "wrong"></p>
+                        </div>
+                        <p class = "para">CONFIRM PASSWORD</p>
+                        <div id = "nothing">
+                        <div class="password-wrapper">
+                        <input id = "cpass" class = "inp" type= "password" name = "cpassword"  autocomplete = "off" required>
+                        <i id = "shows"class="fa-solid fa-eye"></i>
+                        </div>
+                        </div>
+                        <div id = "nothing">
+                            <button id= "sign"class = "signup" type = "submit">REGISTER</button>
+                        </div>
+                    </form>
+                    <p id = "ltoggle">Click here to go back to Login</p>
+                    <p id ="exist"></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "js-vars"
+        data-userexist="{{'true' if user_exist else 'false'}}"
+        data-wrong = "{{'true' if wrong else 'false'}}">
+        
+    </div>
+    <Script>
+        btn2 = document.getElementById("ltoggle");
+        slider = document.querySelector(".form-slider");
+        btn = document.getElementById("toggle");
+        btn.addEventListener("click", function() {
+            slider.style.transform = "translateX(-370px)";
+        });
+        btn2.addEventListener("click", function() {
+            slider.style.transform = "translateX(0px)";
+        });
+        text = document.getElementById("wrong");
+        button = document.getElementById("sign");
+        pass = document.getElementById("pass");
+        cpass = document.getElementById("cpass");
+        pass.addEventListener("input",function(){
+            if(pass.value.length < 6){
+                text.innerHTML = "Min 6 characters";
+                text.style.color = "red";
+                text.style.marginLeft = "45px";
+                button.addEventListener("mouseenter",function(){
+                    button.style.backgroundColor = "red";
+                    button.style.cursor = "default"
+                });
+                button.addEventListener("mouseleave",function(){
+                    button.style.backgroundColor = "";
+                });
+            }
+            else{
+                text.innerHTML = "";
+                button.addEventListener("mouseenter",function(){
+                    button.style.backgroundColor = "";
+                    button.style.cursor = "pointer"
+                });
+                button.addEventListener("mouseleave",function(){
+                    button.style.backgroundColor = "";
+                });
+            }
+        })
+        cpass.addEventListener("input",function(){
+            if(cpass.value != pass.value){
+                cpass.style.borderColor = "red";
+                button.disabled = true;
+                button.addEventListener("mouseenter",function(){
+                    button.style.backgroundColor = "red";
+                    button.style.cursor = "default"
+                });
+                button.addEventListener("mouseleave",function(){
+                    button.style.backgroundColor = "";
+                });
+                
+            }
+            else if(cpass.value == pass.value){
+                cpass.style.borderColor = "green";
+                button.disabled = false;
+                button.addEventListener("mouseenter",function(){
+                    button.style.backgroundColor = "";
+                    button.style.cursor = "pointer"
+                });
+                button.addEventListener("mouseleave",function(){
+                    button.style.backgroundColor = "";
+                });
+                
+                
+            }
+        })
+        show = document.getElementById("show")
+        show.addEventListener("mouseenter",function(){
+            pass.type = "text";
+        })
+        show.addEventListener("mouseleave",function(){
+            pass.type = "password";
+        })
+        shows = document.getElementById("shows")
+        shows.addEventListener("mouseenter",function(){
+            cpass.type = "text";
+        })
+        shows.addEventListener("mouseleave",function(){
+            cpass.type = "password";
+        })
+        lpass = document.getElementById("lpass")
+        lshows = document.getElementById("lshows")
+        lshows.addEventListener("mouseenter",function(){
+            lpass.type = "text";
+        })
+        lshows.addEventListener("mouseleave",function(){
+            lpass.type = "password";
+        })
+        const jsvars = document.getElementById("js-vars");
+        const userexist = jsvars.dataset.userexist ==="true";
+        const wrong = jsvars.dataset.wrong ==="true";
+        if(userexist){
+            console.log("exist");
+            slider.style.transform = "translateX(-370px)";
+            document.getElementById("exist").innerHTML = "User Already Exists";
+        }
+        if(wrong){
+            console.log("wrong");
+            document.getElementById("wrong").innerHTML = "Invalid Credentials";
+        }
+    </Script>
+{%endblock%}

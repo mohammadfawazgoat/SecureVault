@@ -1,0 +1,532 @@
+.navbar{
+    background-color:#00332A !important;
+}
+.navbar-brand{
+    color:#00FC66 !important;
+    font-weight: bold;
+}
+.nav-link{
+    color:#00FF88 !important
+}
+.navbar-brands:hover{
+    transform:scale(1.1);
+}
+.navbar-brand:hover{
+    transform:scale(1.1);
+}
+
+.navbar-brands{
+    margin-right:1rem;
+}
+.nav-link:hover{
+    transform:Scale(1.1);
+}
+.bt{
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+}
+#themebutton {
+    background-color: #00FF88;
+    color: #00332A;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 2px 10px;   
+    height: 28px;        
+    font-size: 1rem;    
+
+}
+
+#themebutton:hover {
+    background-color: #00FC66;
+    color: #001F1A;
+    transform:scale(1.1);
+}
+.logo-img{
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.logo_img{
+    width:auto;
+    height:32px;
+    transform:Scale(4);
+    transform-origin:left;
+    margin-right:90px;
+
+
+}
+
+.lock{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.lock-icon{
+    height :200px;
+    width:auto;
+    margin-top:60px;
+}
+
+.name{
+    display:flex;
+    justify-content:center;
+    color:#439A32;
+}
+.name h1{
+    font-weight: bold;
+}
+#quote{
+    text-align:center;
+    color:#439A32;
+}
+
+.questions{
+    margin-top:3%;
+    margin-left:5%;
+    font-weight:bold; 
+    color:#00FF88;
+}
+
+.qs{
+    margin-top:3%;
+    margin-left:5%;
+    width:75%;
+}
+#pp{
+    margin-left:5%;
+    color:#8a8a8a;
+    font-size: 1.1rem;
+}
+.ans{
+    margin-left:2.8%;
+    color:#8a8a8a;
+    font-size: 1.1rem;
+}
+
+.fa-person-military-rifle, .fa-moon, .fa-lock, .fa-chart-bar{
+    color:#d4d3cf;
+}
+
+
+.custom-list{
+    list-style-type: none;
+    margin-left:0.8%;
+}
+
+.custom-list li {
+    font-size:1.1rem;
+    color:#8a8a8a;
+}
+.custom-list i {
+    width:28px;
+
+}
+
+
+
+.cont{
+    display:flex;
+    justify-content:Center;
+    align-items:Center;
+    height: 100vh;
+}
+.login-container{
+    width:370px;
+    height: 450px;
+    background-color: #00332A;
+    border-radius:5px;
+    border:1px solid #00FF88;
+    overflow:hidden;
+    box-shadow: 0 0  10px  #0ced9b;
+}
+
+.login-container:hover{
+    transform:scale(1.1);
+}
+.form h2{
+    margin-top:20px;
+    font-weight:bold;
+    color:#00FC66;
+    font-size:50px;
+    text-align:center;
+}
+
+#toggle{
+    font-size:20px;
+    color:#0ced9b;
+    margin-top:50px;
+    text-align: center;
+
+}
+
+#toggle:hover{
+    cursor:pointer;
+}
+
+.form-slider{
+    width:740px;
+    height:100%;
+    display:flex;
+    transition:transform 0.5s ease;
+
+}
+
+.form{
+    width:370px;
+    height:100%;
+}
+
+#ltoggle{
+    font-size:20px;
+    color:#0ced9b;
+    margin-top:20px;
+    text-align: center;
+
+}
+
+#ltoggle:hover{
+    cursor:pointer;
+}
+
+.para{
+    margin-bottom:2px;
+    color:#0ced9b;
+    margin-left:45px;
+    margin-top:15px;
+}
+
+.inp{
+    width:280px;
+    background-color:#00332A;
+    border:2px solid #00FF88;
+    color:#00FF88;
+}
+
+.inp:focus{
+    outline:none;
+    border-color:#00FC66;
+}
+
+.signin{
+    margin-top:40px;
+    background-color:#00332A;
+    color:#00FF88;
+    width:280px;
+    height:35px;
+    border:2px solid #00FF88;
+    font-weight:bold;
+}
+
+.signin:hover{
+    background-color:#00FC66;
+    color:#001F1A;
+    transform:scale(1.1);
+    cursor:pointer;
+}
+#nothing{
+    display:flex;
+    justify-content:center;
+}
+
+.signup{
+    margin-top:40px;
+    background-color:#00332A;
+    color:#00FF88;
+    width:280px;
+    height:35px;
+    border:2px solid #00FF88;
+    font-weight:bold;
+}
+
+.signup:hover{
+    background-color:#00FC66;
+    color:#001F1A;
+    transform:scale(1.1);
+    cursor:pointer;
+    border:1px solid green;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+
+
+.password-wrapper i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #00FF88;
+}
+
+#exist{
+    color:red;
+    text-align:center;
+    margin-top:-15px;
+    font-weight:bold;
+}
+
+#wrong{
+    color:red;
+    text-align:center;
+    font-weight:bold;
+}
+
+.pform{
+    display: flex;
+    justify-content:Center;
+}
+
+.fform{
+    height:300px;
+    width:400px;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+#website{
+    margin-bottom:2px;
+    color:#78787B;
+    margin-left:30px;
+    margin-top:15px;
+
+}
+
+.wbs{
+    width:350px;
+    border-radius: 5px;
+    border:none;
+    height:35px;
+    background-color:#171a18;
+    color:#78787B;
+}
+
+#a{
+    display:flex;
+    justify-content:center;
+}
+
+.wbs:focus{
+    outline:1px solid #78787B;
+}
+
+#add{
+    margin-top:20px;
+    width:120px;
+    height:40px;
+    border-radius:10px;
+    border:none;
+    color:black;
+    font-weight:bold;
+    background-color: #439A32;
+}
+
+#add:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+    background-color:green;
+}
+
+#pshow{
+    color:#78787B !important;
+}
+
+#sp{
+    text-align:center;
+    margin-top:2rem;
+    color:#439A32;
+    font-weight:bold;
+}
+
+
+.tb{
+    display:flex;
+    justify-content: center;
+}
+table{
+    width:80%;
+    text-align:center;
+    padding:10px;
+    margin-top:20px;
+    background-color:#1A1B1A;
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing:0;
+    border:2px solid #363536;
+    overflow :hidden;
+}
+
+thead tr:first-child th:first-child{
+    border-top-left-radius:12px;
+}
+
+thead tr:first-child th:last-child{
+    border-top-right-radius:12px;
+}
+
+tbody tr:last-child  td:first-child{
+    border-top-left-radius:12px;
+}
+
+tbody tr:last-child td:last-child{
+    border-top-right-radius:12px;
+}
+thead{
+    height:50px;
+    color:#00FF88;
+    font-weight:bold ;
+
+}
+td,th{
+    border:none;
+    padding:14px;
+}
+
+thead tr th{
+    border-bottom:1px solid #363536;
+}
+tbody tr:not(:last-child) td{
+    border-bottom:1px solid #363536;
+}
+tbody td{
+    color:#439A32;
+    height:40px;
+}
+
+.pfield{
+    border:none;
+    background-color: transparent;
+    color: #439A32;
+    font-weight:bold;
+    text-align:center;
+}
+
+.pfield:focus{
+    outline:none;
+}
+
+.shwbutton{
+    cursor:pointer;
+    background:none;
+    border:none;
+    color:#439A32;
+    outline:none;
+    width:5px;
+    margin-right: -15px;
+}
+
+.shwbutton:focus{
+    box-shadow:none;
+    outline:none;
+}
+
+@media (max-width: 768px){
+    .name h1{
+        font-size:2rem;
+    }
+    #quote{
+        font-size:1rem;
+    }
+    .lock-icon{
+        height:130px;
+        width:130px;
+    }
+    #themebutton{
+        font-size:0.9rem;
+        padding: 3px 10px;
+        height : 30px;
+
+    }
+    .qs{
+        margin-top:70px;
+    }
+    .ans{
+        margin-left:-7px;
+    }
+    .custom-list i {
+        margin-left:-29px;
+    }
+    .logo_img{
+        transform:scale(1.5);
+    }
+    .tb {
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #1A1B1A;
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #363536;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+thead tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+thead tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+thead {
+    height: 50px;
+    color: #00FF88;
+    font-weight: bold;
+}
+td, th {
+    border: none;
+    padding: 8px;
+    min-width: 100px;
+}
+thead tr th {
+    border-bottom: 1px solid #363536;
+}
+tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #363536;
+}
+tbody td {
+    color: #439A32;
+    height: 40px;
+}
+.pfield {
+    border: none;
+    background-color: transparent;
+    color: #439A32;
+    font-weight: bold;
+    text-align: center;
+}
+.pfield:focus {
+    outline: none;
+}
+.shwbutton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #439A32;
+    outline: none;
+    width: 5px;
+    margin-right: -15px;
+}
+.shwbutton:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+
+}
