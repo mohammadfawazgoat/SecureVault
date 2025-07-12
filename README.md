@@ -38,7 +38,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
         f.write(key)
 
 5 **Create a database file and name it password.db**
-   ```bash```
+   
    sqlite3 password.db
    CREATE TABLE users (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -54,7 +54,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
 
 
  6 **Run the app**
-    ```bash
+    
     
     set FLASK_APP = app.py
     flask run    
