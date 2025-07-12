@@ -30,8 +30,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
     ```bash
     pip install -r requirements.txt
 4 **Generate encryption Key**
-
-   
+   ```bash
     from cryptography.fernet import Fernet
     key = Fernet.generate_key()
     with open("secret.key","wb") as f:
@@ -39,7 +38,6 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
 
 5 **Create a database file and name it password.db**
    ```bash
-   
    sqlite3 password.db
    CREATE TABLE users (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -51,8 +49,6 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
    password TEXT NOT NULL,
    website TEXT NOT NULL,
    username TEXT NOT NULL, user_id INTEGER);
-
-
 
  6 **Run the app**
     
