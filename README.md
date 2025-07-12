@@ -51,6 +51,8 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
    website TEXT NOT NULL,
    username TEXT NOT NULL, user_id INTEGER);
 
+
+
  6 **Run the app**
     ```bash
     
