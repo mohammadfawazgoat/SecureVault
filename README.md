@@ -35,8 +35,9 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
     key = Fernet.generate_key()
     with open("secret.key","wb") as f:
       f.write(key)
+```
 5 **Create a database file and name it password.db**
-   ```
+   ```bash
    sqlite3 password.db
    CREATE TABLE users (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -47,7 +48,7 @@ Users can securely store, encrypt, and manage their passwords — with full ligh
    password TEXT NOT NULL,
    website TEXT NOT NULL,
    username TEXT NOT NULL, user_id INTEGER);
-
+```
  6 **Run the app**
  ```bash
     set FLASK_APP = app.py
